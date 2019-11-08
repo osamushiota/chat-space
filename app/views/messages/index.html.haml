@@ -8,32 +8,24 @@
     %link{"data-turbolinks-track" => "reload", :href => "/assets/application-20597f7122b97f433c4487edf7d6a0cfc9e951e2a661b8b0c7320b95bbd38ccd.css", :media => "all", :rel => "stylesheet"}/
     %script{"data-turbolinks-track" => "reload", :src => "/assets/application-92a91cf5753a538c5407a46c726acab43576fb46358ffa8a7ee0ee0719aa2f51.js"}
   %body
--# .flash-box
--#   .notice ログインしました。
 .wrapper
-  -# = render "_side_bar.html.haml"
-  -# = render "_main_chat.html.haml"
   .chat-side
     .side-header
       .side-header__box
         %p.side-header__box__user-name sam
         %ul.side-header__box__menu
           =link_to "#", class: "side-header__box__menu__new-group" do
-            -# %a{:href => "/groups/new"}
             =fa_icon 'pencil-square-o'
             %i.pencil-square-o
           =link_to "#", class: "side-header__box__menu__edit-user" do
-            -# %a{:href => "/users/1945/edit"}
             =fa_icon 'cog'
             %i.cog
           .side-header__box__menu__edit-user
 
     .groups
-      -# %a{:href => "/groups/4416/messages"}
       .group
         %p.group__group-name sam
         %p.group__latest-message テスト
-    -# %a{:href => "/groups/4445/messages"}
       .group 
         %p.group__group-name samsam
         %p.group__latest-message まだメッセージがありません
@@ -51,7 +43,6 @@
           Member : 
           %li.main-header__left-box__member-list__member  sam 
           %li.main-header__left-box__member-list__member  sample
-      -# %a{:href => "/groups/4416/edit"} 
       .main-header__edit-btn Edit
 
     .messages 
@@ -79,14 +70,3 @@
           .input-box__submit-btn  
             %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
 
-    -# .form
-    -# %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/4416/messages", :enctype => "multipart/form-data", :method => "post"}
-    -#   %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-    -#   %input{:name => "authenticity_token", :type => "hidden", :value => "cOMKBqnGX2NO7mN0PsJWAV467DQvOEpYmTbkL8XEvRjioS3U275G5x0xk3YSfapKnrTDaQ6zogzC5NdR+kEYeQ=="}/
-    -#   .input-box
-    -#     %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-    -#     %label.input-box__image{:for => "message_image"}
-    -#       %i.fa.fa-image
-    -#       %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
-    -#   %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
-    
