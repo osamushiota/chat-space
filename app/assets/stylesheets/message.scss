@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  
+  
+  .chat-side {
+    width: 300px;
+    color: white;
+    float: left;
+    
+    .fa {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      color: white;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .side-header {
+      background-color: #253141;
+      height: 100px;
+      align-items: center;
+      padding: 0 20px;
+      display: flex;
+      &__box {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-weight: bold;
+        color: white;
+        &__user-name {
+          font-size: 16px;
+          font-weight: bold;
+          &__menu {
+            display: flex;
+            &__new-group {
+              margin-left: 0.3rem;
+            }
+            &__edit-user {
+              margin-left: 0.3rem;
+            }
+          }
+        }
+      }
+    }
+  
+    .groups {
+        height: calc(100vh - 100px);
+        background-color: #2f3e51;
+        padding: 20px 20px 0;
+        width: 100%;
+      &__group {
+        margin-bottom: 40px;
+        &__group-name {
+          font-size: 15px;
+          margin-bottom: 5px;
+          }
+        &__group__latest-message {
+          font-size: 11px;
+        }
+      }
+        
+    }
+  }
+
+  .chat-main {
+    width: calc(100vw - 300px);
+    float: left;
+    .main-header {
+      height: 100px;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: solid 1px #eee;
+      &__edit-btn {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        margin-top: 30px;
+        border: solid 1px #38aef0;
+        color: #38aef0;
+        position: absolute;
+        right: 40px;
+      }
+      &__left-box {
+        margin-top: 35px;
+        &__current-group {
+          font-size: 20px;
+          color: #333;
+          margin-bottom: 15px;
+        }
+        &__member-list {
+          display: flex;
+          justify-content: flex-start;
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+    }
+      .messages {
+        height: calc(100vh - 190px);
+        padding: 46px 40px;
+        background-color: #fafafa;
+        overflow: scroll;
+          .message {
+            padding-bottom: 40px;
+              &__upper-info {
+                display: flex;
+                margin-bottom: 10px;
+                  &__talker {
+                    color: #434a54;
+                    font-size: 16px;
+                    font-weight: bold;
+                  }
+                  &__date {
+                    color: #999999;
+                    font-size: 12px;
+                    margin-left: 10px;
+                  }
+                }
+            &__text {
+                color: #434a54;
+                font-size: 14px;
+                margin-bottom: 10px;
+            } 
+          }
+      }
+    
+
+      .form {
+        height: 90px;
+        padding: 20px 40px;
+        background-color: #ddd;
+
+        .new_message {
+          display: flex;
+            &__input-box {
+              position: relative;
+              display: flex;
+              width: 100%;
+            &__text {
+              height: 50px;
+              width: 100%;
+              padding: 0 40px 0 10px;
+              color: #434a54;
+              border-style: none;
+              }
+            &__image {
+              font-size: 1.3rem;
+              position: absolute;
+              // top: 10px;
+              bottom: 30px;
+              right: 165px;
+              cursor: pointer;
+              &__file {
+                display: none;
+                }
+            }
+
+            .fa {
+              display: inline-block;
+              font: normal normal normal 14px/1 FontAwesome;
+              font-size: inherit;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+              } 
+          }  
+                 
+          .input-box__submit-btn {
+            width: 100px;
+            height: 50px;
+            padding: 0 30px;
+            margin-left: 15px;
+            background-color: #38aef0;
+            color: white;
+            cursor: pointer;
+            }  
+      }
+
+            
+    } 
+  }    
+}
+    
