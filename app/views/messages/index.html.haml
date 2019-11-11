@@ -20,10 +20,6 @@
         %p.group__group-name samsam
         %p.group__latest-message まだメッセージがありません
   
-
-
-
-
   .chat-main
     .main-header
       .main-header__left-box
@@ -48,15 +44,11 @@
         %p.message__text checkcheckcheck
 
     .form
-      %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/4416/messages", :enctype => "multipart/form-data", :method => "post"}
-        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-        %input{:name => "authenticity_token", :type => "hidden", :value => "cOMKBqnGX2NO7mN0PsJWAV467DQvOEpYmTbkL8XEvRjioS3U275G5x0xk3YSfapKnrTDaQ6zogzC5NdR+kEYeQ=="}/
-        .new_message_input_box
-        .input-box
-          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-          %label.input-box__image{:for => "message_image"}
-            %i.fa.fa-image
-            %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
-          .input-box__submit-btn  
-            %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
-
+      %form.new_message
+        %p.new_message_input_box
+          .input-box
+          %input.new_message__input-box__text{placeholder: "type a message", type: "text"}
+            %label.new_message__input-box__image{for: "message_image"}
+              %i.fa.fa-image
+                %input.new_message__input-box__image__file{type: "file"}
+          %input.input-box__submit-btn{type: "submit", value: "Send"}
