@@ -58,3 +58,5 @@ gem 'devise'
 group :development do 
      gem 'rspec'
 end
+gem 'carrierwave'
+gem 'mini_magick'
