@@ -1,0 +1,32 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group
+        sam
+      %ul.main-header__left-box__member-list
+        Member : 
+        %li.main-header__left-box__member-list__member  sam 
+        %li.main-header__left-box__member-list__member  sample
+    .main-header__edit-btn Edit
+
+  .messages 
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker sam
+        %p.message__upper-info__date 2019/11/06(Wed) 19:38:44
+      %p.message__text テスト
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker sam
+        %p.message__upper-info__date 2019/11/06(Wed) 19:38:44
+      %p.message__text checkcheckcheck
+
+  .form
+    %form.new_message
+      %p.new_message_input_box
+        .input-box
+        %input.new_message__input-box__text{placeholder: "type a message", type: "text"}
+          %label.new_message__input-box__image{for: "message_image"}
+            %i.fa.fa-image
+              %input.new_message__input-box__image__file{type: "file"}
+        %input.input-box__submit-btn{type: "submit", value: "Send"}
