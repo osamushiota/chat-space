@@ -105,7 +105,7 @@
         height: calc(100vh - 190px);
         padding: 46px 40px;
         background-color: #fafafa;
-        overflow: scroll;
+        overflow: auto;
           .message {
             padding-bottom: 40px;
               &__upper-info {
@@ -138,51 +138,49 @@
 
         .new_message {
           display: flex;
-            &__input-box {
-              position: relative;
-              display: flex;
-              width: 100%;
-            &__text {
-              height: 50px;
-              width: 100%;
-              padding: 0 40px 0 10px;
-              color: #434a54;
-              border-style: none;
+              &__input-box {
+                position: relative;
+                display: flex;
+                width: 100%;
+                &__text {
+                  height: 50px;
+                  width: 100%;
+                  padding: 0 40px 0 10px;
+                  color: #434a54;
+                  border-style: none;
+                  }
+              &__image {
+                font-size: 1.3rem;
+                position: absolute;
+                // top: 10px;
+                bottom: 30px;
+                right: 165px;
+                cursor: pointer;
+                  &__file {
+                    display: none;
+                    }
               }
-            &__image {
-              font-size: 1.3rem;
-              position: absolute;
-              // top: 10px;
-              bottom: 30px;
-              right: 165px;
-              cursor: pointer;
-              &__file {
-                display: none;
-                }
-            }
 
-            .fa {
-              display: inline-block;
-              font: normal normal normal 14px/1 FontAwesome;
-              font-size: inherit;
-              text-rendering: auto;
-              -webkit-font-smoothing: antialiased;
-              } 
-          }  
-                 
-          .input-box__submit-btn {
-            width: 100px;
-            height: 50px;
-            padding: 0 30px;
-            margin-left: 15px;
-            background-color: #38aef0;
-            color: white;
-            cursor: pointer;
+              // .fa {
+              //   display: inline-block;
+              //   font: normal normal normal 14px/1 FontAwesome;
+              //   font-size: inherit;
+              //   text-rendering: auto;
+              //   -webkit-font-smoothing: antialiased;
+              //   } 
             }  
-      }
-
-            
-    } 
+                 
+              .input-box__submit-btn {
+                width: 100px;
+                height: 50px;
+                padding: 0 30px;
+                margin-left: 15px;
+                background-color: #38aef0;
+                color: white;
+                cursor: pointer;
+              }  
+        }
+      } 
   }    
 }
     
