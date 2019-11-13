@@ -26,9 +26,9 @@
     .new_message
       = form_for [@group, @message] do |f|
         .input-box
-          = f.text_field :content, class: 'new_message__input-box__text', placeholder: 'type a message'
-        = f.label :image, class: 'new_message__input-box__image' do
-          = icon('fas', 'image', class: 'icon')
-          = f.file_field :image, class: 'new_message__input-box__image__file'
+          = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+          = f.label :image, class: 'input-box__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'input-box__image__file'
         = f.submit 'Send', class: 'form__submit'
   
