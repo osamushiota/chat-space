@@ -5,8 +5,8 @@
         = @group.name
       %ul.main-header__left-box__member-list
         Member : 
-        %li.main-header__left-box__member-list__member
-          = @group.users.name
+        %li.main-header__left-box__member-list__member  sam 
+        %li.main-header__left-box__member-list__member  sample
     .main-header__edit-btn Edit  
     =link_to edit_group_path(@group), class: "main-header__edit-btn" do
       Edit
@@ -14,15 +14,13 @@
     = render partial: 'message', collection: @messages
     .message
       .message__upper-info
-        %p.message
-        -# %p.message{"data-messege-id" => ""}__upper-info__talker
-        -# %p.message{"data-messege-id" => ""}__upper-info__date 
+        %p.message__upper-info__talker 
+        %p.message__upper-info__date 
       %p.message__text 
     .message
       .message__upper-info
-        %p.message
-        -# %p.message{"data-messege-id" => ""}__upper-info__talker
-        -# %p.message{"data-messege-id" => ""}__upper-info__date 
+        %p.message__upper-info__talker 
+        %p.message__upper-info__date 
       %p.message__text 
   
   .form
