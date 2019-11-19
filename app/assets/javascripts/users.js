@@ -1,13 +1,13 @@
 $(function(){
-    function addUser(user) {{
+    function addUser(user) {
     let html = `
       <div class="chat-group-user clearfix">
         <p class="chat-group-user__name">${user.name}</p>
-        <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="ユーザーのid" data-user-name="ユーザー名">追加</div>
+        <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
       </div>
       `;
       $("#user-search-result").append(html);
-      }
+    }
 
     function addNoUser() {
     let html = `
@@ -16,8 +16,8 @@ $(function(){
       </div>
       `;
       $("#user-search-result").append(html);
-      }  
-    }
+    }  
+  
     function addDeleteUser(name, id) {
       let html = `
       <div class="chat-group-user clearfix" id="${id}">
@@ -34,6 +34,7 @@ $(function(){
 
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
+    console.log()
     $.ajax({
       type: "GET",
       url: "/users",
@@ -73,24 +74,3 @@ $(function(){
       .remove();    
   });
 })
-
-
-
-
-
-
-//       .done(function(users) {
-//         console.log("成功です");
-//       })
-//       .fail(function() {
-//         console.log("失敗です");
-//       });
-//   });
-// })
-
-// $(function() {
-//   $("#user-search-field").on("keyup", function() {
-//     let input = $("#user-search-field").val();
-//     console.log(input);
-//   });
-// });
