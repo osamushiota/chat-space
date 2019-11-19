@@ -74,7 +74,8 @@ $(function(){
       });
     }
   };
-  setInterval(reloadMessages, 4000);
+  setInterval(reloadMessages, 5000);
+  //5000ミリ秒ごとにreloadMessagesという関数を実行し自動更新を行う。
 });
 
 
