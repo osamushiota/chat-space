@@ -4,7 +4,7 @@
       %h3.side-header__box__user-name 
         = current_user.name
       %ul.side-header__box__menu
-        =link_to new_group_path, class: "side-header__box__menu__new-group" do
+        =link_to new_group_path, class: "side-header__box__menu__new-group", data: {"turbolinks" => false} do
           = fa_icon 'pencil-square-o', class: 'icon'
           %i.pencil-square-o
         =link_to edit_user_path(current_user), class: "side-header__box__menu__edit-user" do

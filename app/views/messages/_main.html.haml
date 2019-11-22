@@ -6,21 +6,15 @@
       %ul.main-header__left-box__member-list
         Member : 
         %li.main-header__left-box__member-list__member
-          = @user_name
+          - @group.users.each do |user|
+            =user.name
     .main-header__edit-btn Edit  
     =link_to edit_group_path(@group), class: "main-header__edit-btn" do
       Edit
+
   .messages
     = render partial: 'message', collection: @messages
-    .message
-      .message__upper-info
-        %p.message
-      %p.message__text 
-    .message
-      .message__upper-info
-        %p.message
-      %p.message__text 
-  
+    
   .form
     .new_message
       = form_for [@group, @message] do |f|
