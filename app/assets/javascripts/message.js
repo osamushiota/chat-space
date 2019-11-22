@@ -1,6 +1,7 @@
 $(function(){
   function buildHTML(message){
-    let image = `<img class= "lower-message__image" src=${message.image} >`
+    let image = ( message.image ) ? `<img class= "lower-message__image" src=${message.image} >` : "";
+    // let image = `<img class= "lower-message__image" src=${message.image} >`
     let html = `<div class="message", "data-message-id": "#{message.id}">
                   <div class="upper-message">
                     <div class="upper-message__user-name">
@@ -17,6 +18,7 @@ $(function(){
                     ${image}
                   </div>
                 </div>`
+  // $('.messages').append(html);
   return html;
 }
 
@@ -72,7 +74,7 @@ $(function(){
       });
     }
   };
-  setInterval(reloadMessages, 5000);
+  setInterval(reloadMessages, 7000);
 });
 
 
