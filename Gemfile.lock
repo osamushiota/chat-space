@@ -312,6 +312,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   devise
+  excon
   fog-aws
   font-awesome-rails
   font-awesome-sass
